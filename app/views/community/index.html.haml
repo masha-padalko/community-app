@@ -1,2 +1,12 @@
-<h1>Community#index</h1>
-<p>Find me in app/views/community/index.html.erb</p>
+%header
+  .container
+    = t('hello')
+%section
+  .container{"ng-controller" => "myCommunity"}
+    %p Start chat with your friends
+    %div{:"ng-repeat" => "item in items"}
+      %span {{item.id}}
+      %span {{item.name}}
+      %span{"ng-src" => '{{item.img}}'}
+      %span {{item.message}}
+
