@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 
 gem "haml-rails"
 
-gem 'angular-rails-templates'
+gem 'angularjs-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

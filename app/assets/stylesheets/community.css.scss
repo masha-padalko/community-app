@@ -22,15 +22,20 @@ header {
 .container {
   width: $main-width;
   margin: 0 auto;
+
+  p{
+    margin-bottom: 10px;
+  }
 }
 
 section{
   height: 100%;
 
   .container {
-  background: #FFBF40;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 20px;
+    @include box-sizing (border-box);
+    background: #FFBF40;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
   }
 }

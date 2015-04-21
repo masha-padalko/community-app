@@ -14,4 +14,15 @@
  */
  @import 'reset';
  @import 'variables';
+ @import 'mixins';
  @import 'community';
+ @import 'message';
+ @import 'form';
+
+ .clr {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+ }

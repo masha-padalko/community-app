@@ -3,10 +3,14 @@
     = t('hello')
 %section
   .container{"ng-controller" => "myCommunity"}
-    %p Start chat with your friends
-    %div{:"ng-repeat" => "item in items"}
-      %span {{item.id}}
-      %span {{item.name}}
-      %span{"ng-src" => '{{item.img}}'}
-      %span {{item.message}}
-
+    %p Start post messages for your friends
+    %form.add-message-form{"ng-submit" => "addMessage()"}
+      %input.form-input{"ng-model" => "newName", :placeholder => "Name", :type => "text"}
+      %input.form-input{"ng-model" => "newAva", :placeholder => "Enter link to your avatar", :type => "text"}
+      %textarea.form-input{"ng-model" => "newMes", :placeholder => "Message", :type => "text"}
+      %button{:type => "submit"} Post message
+    .wrapper.clr
+      %div.message{"ng-repeat" => "item in items"}
+        %span.name {{item.name}}
+        %img{"ng-src" => '{{item.img}}'}
+        %span.mes {{item.message}}
