@@ -2,8 +2,11 @@
 %html{"ng-app" => "myCommunityModule"}
   %head
     %title CommunityApp
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %script{:src => "https://cdn.firebase.com/js/client/2.2.1/firebase.js"}
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    %script{:src => "https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"}
     = csrf_meta_tags
   %body
     = yield

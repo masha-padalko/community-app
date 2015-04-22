@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  height: 100px;
+  min-height: 100px;
   background: #BF8F30;
   width: 100%;
   line-height: 100px;
@@ -20,21 +20,20 @@ header {
 }
 
 .container {
-  width: $main-width;
+  max-width: $main-width;
   margin: 0 auto;
+  overflow: hidden;
 
-  p{
+  p {
     margin-bottom: 10px;
   }
 }
 
-section{
-  height: 100%;
+section {
 
   .container {
     @include box-sizing (border-box);
     background: #FFBF40;
-    height: 100%;
     box-sizing: border-box;
     padding: 20px;
   }

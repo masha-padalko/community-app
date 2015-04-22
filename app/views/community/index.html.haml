@@ -5,12 +5,10 @@
   .container{"ng-controller" => "myCommunity"}
     %p Start post messages for your friends
     %form.add-message-form{"ng-submit" => "addMessage()"}
-      %input.form-input{"ng-model" => "newName", :placeholder => "Name", :type => "text"}
-      %input.form-input{"ng-model" => "newAva", :placeholder => "Enter link to your avatar", :type => "text"}
-      %textarea.form-input{"ng-model" => "newMes", :placeholder => "Message", :type => "text"}
+      %input.form-input{"ng-model" => "newItem.newName", :placeholder => "Name", :type => "text", :required => ""}
+      %input.form-input{"ng-model" => "newItem.newAva", :placeholder => "Enter link to your avatar", :type => "text", :required => ""}
+      %textarea.form-input{"ng-model" => "newItem.newMes", :placeholder => "Message", :type => "text", :required => ""}
       %button{:type => "submit"} Post message
     .wrapper.clr
-      %div.message{"ng-repeat" => "item in items"}
-        %span.name {{item.name}}
-        %img{"ng-src" => '{{item.img}}'}
-        %span.mes {{item.message}}
+      %comment{"ng-repeat" => "item in items"}
+

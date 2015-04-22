@@ -18,6 +18,11 @@
  @import 'community';
  @import 'message';
  @import 'form';
+ @import 'queries';
+
+ img {
+  max-width: 100%;
+ }
 
  .clr {
   &:after {
